@@ -23,7 +23,7 @@ abstract class ReminderRoomDatabase :RoomDatabase(){
                 if(reminderRoomDatabaseInstace == null){
                     reminderRoomDatabaseInstace = Room.databaseBuilder(
                         context.applicationContext,ReminderRoomDatabase::class.java,DATABASE_NAME
-                    ).allowMainThreadQueries().build()
+                    ).build()
                 }
             }
             }

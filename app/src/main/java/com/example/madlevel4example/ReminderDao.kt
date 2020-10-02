@@ -6,11 +6,11 @@ import com.example.madlevel2example.Reminder
 @Dao
 interface ReminderDao {
     @Query("SELECT * FROM remindertable")
-    fun getAllReminders():List<Reminder>
+    suspend fun getAllReminders():List<Reminder>
     @Insert
-    fun insertReminder(reminder: Reminder)
+    suspend fun insertReminder(reminder: Reminder)
     @Delete
-    fun deleteReminder(reminder: Reminder)
+    suspend fun deleteReminder(reminder: Reminder)
     @Update
-    fun updateReminder(reminder: Reminder)
+    suspend fun updateReminder(reminder: Reminder)
 }
