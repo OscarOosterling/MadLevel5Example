@@ -1,12 +1,13 @@
 package com.example.madlevel5example
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.madlevel2example.Reminder
 
 @Dao
 interface ReminderDao {
     @Query("SELECT * FROM remindertable")
-    suspend fun getAllReminders():List<Reminder>
+     fun getAllReminders(): LiveData<List<Reminder>>
     @Insert
     suspend fun insertReminder(reminder: Reminder)
     @Delete
